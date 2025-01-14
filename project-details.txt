@@ -1,0 +1,34 @@
+Merhaba Arkadaşlar,
+
+Ekte bulunan makalede (Abualigah2022_Article_Meta-heuristicOptimizationAlgo.pdf) gerçek hayat mühendislik problemleri yer almaktadır. Bu problemler şu şekildedir:
+
+Problem 1: Welded beam design
+Problem 2: Tension/compression spring design problem
+Problem 3: Pressure vessel design problem
+Problem 4: 3-bar truss design
+Problem 5: Speed reducer
+Problem 6: Cantilever beam design
+Problem 7: Multiple disc clutch brake
+
+Yukarıdaki bu problemlerden birini seçerek Immune Plasma Algorithm (immune_plasma_algorithm_novel_metaheuristic.pdf) ile çalıştırıp, makalede yer alan diğer yöntemlere ait sonuçlar ile karşılaştırınız. Ekte yer alan latex şablonuna uygun olarak raporunuzu hazırlayınız. Son teslim tarihi 15 Ocak 2025 Çarşamba günü saat 17:00'dır.
+
+Immune Plasma Algorithm hakkında
+15 farklı nümerik problemi test edebileceğiniz Immune Plasma algoritmasına ait C kaynak kodlarını ekte bulabilirsiniz (.c uzantılı IPA kaynak kodu, tamamlanma sürelerini ölçmek için timer.h). Kaynak kodların #define pre-processor direktifi ile başlayan satırlarında istediğiniz değişiklikleri yaparak algoritmayı test edebilirsiniz. Ekte yer alan github sayfasında yüksek lisans öğrencimin yazdığı Julia, Matlab ve Python kodlarına da erişim yapabilirsiniz.
+
+Örneğin 200 parametreli Rosenbrock's Valley problemini IPA popülasyonunu 100, donor ve receiver sayılarını 1, maksimum evaluasyon (değerlendirme) sayısını 100000 yaparak çözmek için #define pre-processor direktiflerini aşağıdkai gibi set edebilirsiniz. Problemin parametrelerinin alt ve üst sınırları yine -30 ve +30 aralığında set edilmiştir. Eğer problemin parametrelerinin alt ve üst sınırlarını değiştirmek isterseniz aşağıdaki pre-processor direktiflerini değiştirebilirsiniz.
+
+#define NUMBEROFPARAMETERS 200
+#define UPPERBOUNDOFPARAMETERS 30.0
+#define LOWERBOUNDOFPARAMETERS -30.0
+#define OBJECTIVEFUNCTION calculateRosenbrockValleyFunction
+
+#define NUMBEROFDONORS 1
+#define NUMBEROFRECEIVERS 1
+#define NUMBEROFINDIVIDUALS 100
+
+#define MAXIMUMFITNESSEVALUATIONS 100000
+
+Eğer kendi probleminizi IPA ile çözmek isterseniz amaç fonksiyonunuzu calculateRosenbrockValley fonksiyonunda olduğu gibi implemente etmeniz gerekmektedir. Kaynak kodlarını çalıştırmanız için eğer MS-DOS tabanlı bir işletim sistemi kullanıyorsanız Dev C++ editörü ve editör ile birlikte gelen C derleyicisini kurmanız gerekmektedir.
+
+Sevgilerimle,
+Doç. Dr. Sercan Demirci
